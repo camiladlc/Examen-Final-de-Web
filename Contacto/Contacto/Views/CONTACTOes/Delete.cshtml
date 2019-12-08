@@ -1,0 +1,87 @@
+﻿@model Contacto.Models.CONTACTO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<h3>¿Estas seguro que quieres borrar esto?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APELLIDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APELLIDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHADECREACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHADECREACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MOTIVODEVISITA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MOTIVODEVISITA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHADEVISITA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHADEVISITA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORADEENTRADA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORADEENTRADA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORADESALIDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORADESALIDA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERSONAQUELOASISTIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERSONAQUELOASISTIO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

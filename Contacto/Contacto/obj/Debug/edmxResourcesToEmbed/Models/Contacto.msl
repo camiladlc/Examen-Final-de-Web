@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VISITASModelStoreContainer" CdmEntityContainer="VISITASEntities">
+    <EntitySetMapping Name="CONTACTO">
+      <EntityTypeMapping TypeName="VISITASModel.CONTACTO">
+        <MappingFragment StoreEntitySet="CONTACTO">
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="DOCUMENTODEIDENTIDAD" ColumnName="DOCUMENTODEIDENTIDAD" />
+          <ScalarProperty Name="FECHADECREACION" ColumnName="FECHADECREACION" />
+          <ScalarProperty Name="MOTIVODEVISITA" ColumnName="MOTIVODEVISITA" />
+          <ScalarProperty Name="FECHADEVISITA" ColumnName="FECHADEVISITA" />
+          <ScalarProperty Name="HORADEENTRADA" ColumnName="HORADEENTRADA" />
+          <ScalarProperty Name="HORADESALIDA" ColumnName="HORADESALIDA" />
+          <ScalarProperty Name="PERSONAQUELOASISTIO" ColumnName="PERSONAQUELOASISTIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

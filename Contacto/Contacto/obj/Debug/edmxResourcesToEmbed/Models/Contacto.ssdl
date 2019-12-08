@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VISITASModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CONTACTO">
+    <Key>
+      <PropertyRef Name="DOCUMENTODEIDENTIDAD" />
+    </Key>
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="APELLIDO" Type="varchar" MaxLength="50" />
+    <Property Name="DOCUMENTODEIDENTIDAD" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="FECHADECREACION" Type="date" />
+    <Property Name="MOTIVODEVISITA" Type="varchar" MaxLength="100" />
+    <Property Name="FECHADEVISITA" Type="date" />
+    <Property Name="HORADEENTRADA" Type="time" Precision="7" />
+    <Property Name="HORADESALIDA" Type="time" Precision="7" />
+    <Property Name="PERSONAQUELOASISTIO" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityContainer Name="VISITASModelStoreContainer">
+    <EntitySet Name="CONTACTO" EntityType="Self.CONTACTO" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

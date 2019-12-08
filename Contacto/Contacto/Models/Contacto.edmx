@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VISITASModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CONTACTO">
+          <Key>
+            <PropertyRef Name="DOCUMENTODEIDENTIDAD" />
+          </Key>
+          <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="APELLIDO" Type="varchar" MaxLength="50" />
+          <Property Name="DOCUMENTODEIDENTIDAD" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="FECHADECREACION" Type="date" />
+          <Property Name="MOTIVODEVISITA" Type="varchar" MaxLength="100" />
+          <Property Name="FECHADEVISITA" Type="date" />
+          <Property Name="HORADEENTRADA" Type="time" Precision="7" />
+          <Property Name="HORADESALIDA" Type="time" Precision="7" />
+          <Property Name="PERSONAQUELOASISTIO" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityContainer Name="VISITASModelStoreContainer">
+          <EntitySet Name="CONTACTO" EntityType="Self.CONTACTO" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VISITASModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CONTACTO">
+          <Key>
+            <PropertyRef Name="DOCUMENTODEIDENTIDAD" />
+          </Key>
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOCUMENTODEIDENTIDAD" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FECHADECREACION" Type="DateTime" Precision="0" />
+          <Property Name="MOTIVODEVISITA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FECHADEVISITA" Type="DateTime" Precision="0" />
+          <Property Name="HORADEENTRADA" Type="Time" Precision="7" />
+          <Property Name="HORADESALIDA" Type="Time" Precision="7" />
+          <Property Name="PERSONAQUELOASISTIO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="VISITASEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CONTACTO" EntityType="Self.CONTACTO" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VISITASModelStoreContainer" CdmEntityContainer="VISITASEntities">
+          <EntitySetMapping Name="CONTACTO">
+            <EntityTypeMapping TypeName="VISITASModel.CONTACTO">
+              <MappingFragment StoreEntitySet="CONTACTO">
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="DOCUMENTODEIDENTIDAD" ColumnName="DOCUMENTODEIDENTIDAD" />
+                <ScalarProperty Name="FECHADECREACION" ColumnName="FECHADECREACION" />
+                <ScalarProperty Name="MOTIVODEVISITA" ColumnName="MOTIVODEVISITA" />
+                <ScalarProperty Name="FECHADEVISITA" ColumnName="FECHADEVISITA" />
+                <ScalarProperty Name="HORADEENTRADA" ColumnName="HORADEENTRADA" />
+                <ScalarProperty Name="HORADESALIDA" ColumnName="HORADESALIDA" />
+                <ScalarProperty Name="PERSONAQUELOASISTIO" ColumnName="PERSONAQUELOASISTIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

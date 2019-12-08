@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Contacto.Models.CONTACTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table" style="margin-top:3%">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APELLIDO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHADECREACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOTIVODEVISITA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHADEVISITA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORADEENTRADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORADESALIDA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PERSONAQUELOASISTIO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APELLIDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHADECREACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOTIVODEVISITA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHADEVISITA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORADEENTRADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORADESALIDA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERSONAQUELOASISTIO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.DOCUMENTODEIDENTIDAD }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.DOCUMENTODEIDENTIDAD }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.DOCUMENTODEIDENTIDAD })
+        </td>
+    </tr>
+}
+
+</table>

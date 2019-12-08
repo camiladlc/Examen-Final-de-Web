@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+</head>
+<body>
+
+    <nav>
+        <div class="nav-wrapper" style="margin-left:5%; margin-right:5%">
+            <a href="http://localhost:61187/CONTACTOes/PaginaPrincipal" class="brand-logo">CONTACTO</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="http://localhost:61187/CONTACTOes/PaginaPrincipal">PAGINA PRINCIPAL</a></li>
+                <li><a href="http://localhost:61187/CONTACTOes/Create">MANTENIMIENTO</a></li>
+                <li><a href="http://localhost:61187/CONTACTOes/Index">VISITAS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - EXAMEN FINAL</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
